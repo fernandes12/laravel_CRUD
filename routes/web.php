@@ -13,10 +13,5 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
-});
+Route::get('/', 'BookController@index'); //Call BookController and then the method Index
 
-Route::get('about', function(){
-    return view('pages.about');
-});
