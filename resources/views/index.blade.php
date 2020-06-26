@@ -5,7 +5,7 @@
     <hr>
 
     <div class="text-center mt-3 mb-4">
-        <a href="">
+        <a href="{{url('books/create')}}">
             <button class="btn btn-success">Cadastrar</button>
         </a>
     </div>
@@ -34,8 +34,8 @@
                 <a href="{{url("books/$books->id")}}">
                         <button class="btn btn-dark">Visualizar</button>
                     </a>
-                    <a href="">
-                        <button class="btn btn-primary">Editar</button>
+                    <a href="{{url("books/$books->id/edit ")}}">
+                        <button class="btn btn-primary">@if(isset($book)) Editar @else Cadastrar @endif</button>
                     </a>
                     <a href="">
                         <button class="btn btn-danger">Eliminar</button>
